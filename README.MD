@@ -37,6 +37,8 @@ In Kibana, navigate to **Stack Management → API Keys** and create a new key. G
 ## Usage
 
 Once setup is complete, open Claude Code in this directory. Claude will automatically have access to the `elastic-cluster-interface` subagent. Simply describe what you want to explore or query in natural language and Claude will use the appropriate Elastic tools.
+
+
 ### Platform & Core
 
 | Capability | Description |
