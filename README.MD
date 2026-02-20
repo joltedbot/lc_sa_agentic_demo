@@ -12,10 +12,10 @@ It provides developers of Elastic based projects the ability to interact "where 
 
 ## Setup
 
-Run the setup script once to register the Elastic MCP server with Claude Code:
+Run the Claude setup script once to register the Elastic MCP server with Claude Code:
 
 ```bash
-./setup/setup.sh
+./setup/claude.sh
 ```
 
 The script will prompt you for two pieces of information:
@@ -29,6 +29,25 @@ The script will prompt you for two pieces of information:
 2. **Elastic API Key** — your API key for authenticating with the Elastic cluster. The key is masked as you type.
 
 After confirming, the script registers the `elastic` MCP server at user scope (`~/.claude.json`). Re-running the script is safe — it skips registration if the server is already present.
+
+Run the Gemini setup script once to register the Elastic MCP server with Gemini:
+
+```bash
+./setup/gemini.sh
+```
+
+The script will prompt you for two pieces of information:
+
+1. **Base Kibana URL** — the root URL of your Kibana instance, without any path.
+
+   Example: `https://my-deployment.kb.us-east-1.aws.found.io`
+
+   The script automatically appends the required MCP API path (`/api/agent_builder/mcp`).
+
+2. **Elastic API Key** — your API key for authenticating with the Elastic cluster. The key is masked as you type.
+
+After confirming, the script registers the `elastic` MCP server at user scope (`~/.gemini.json`). Re-running the script is safe — it skips registration if the server is already present.
+
 
 ### Creating an Elastic API Key
 
